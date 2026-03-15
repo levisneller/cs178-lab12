@@ -31,6 +31,7 @@ def hello(name):
 #  Each exercise asks you to add a new @app.route here
 # ============================================================
 
+'''
 # ---- Exercise 1: add this to flaskapp.py ----
 
 @app.route('/analyze/<word>')
@@ -38,6 +39,25 @@ def analyze(word):
     numletters = len(word)
     return str(numletters)
     pass
+'''
+
+# ---- Exercise 2: update your analyze route ----
+
+@app.route('/analyze/<word>')
+def analyze(word):
+    # Step 1: character count (already done)
+    num_chars = len(word)
+
+    # Step 2: YOUR CODE HERE
+    vowels = "aeiouAEIOU"
+    num_vowels = sum(1 for letter in word if letter in vowels)
+
+    # render_template passes all variables into analyze.html
+    return render_template('analyze.html',
+                           word=word,
+                           num_chars=num_chars,
+                           num_vowels=num_vowels)
+
 
 
 
