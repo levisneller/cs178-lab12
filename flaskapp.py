@@ -41,6 +41,7 @@ def analyze(word):
     pass
 '''
 
+'''
 # ---- Exercise 2: update your analyze route ----
 
 @app.route('/analyze/<word>')
@@ -57,6 +58,7 @@ def analyze(word):
                            word=word,
                            num_chars=num_chars,
                            num_vowels=num_vowels)
+'''
 
 # ---- Exercise 3: update your analyze route again ----
 
