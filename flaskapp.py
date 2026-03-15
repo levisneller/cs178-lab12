@@ -36,7 +36,7 @@ def hello(name):
 @app.route('/analyze/<word>')
 def analyze(word):
     numletters = len(word)
-    return(numletters)
+    return str(numletters)
     pass
 
 
